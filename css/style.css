@@ -366,7 +366,7 @@ a:focus {
 }
 
 .section-title .vertical-line span, .section-title-white .vertical-line span {
-  background: rgba(94, 154, 142, 0.2);
+  background: rgba(94, 154, 142, 0.8);
   width: 2px;
   height: 42px;
   top: 17px;
@@ -403,7 +403,7 @@ a:focus {
   font-size: 65px;
   font-size: 3.61111rem;
   color: #5e9a8e;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 @media (max-width: 991px) {
@@ -415,7 +415,7 @@ a:focus {
 
 .section-title .vertical-line:before, .section-title-white .vertical-line:before {
   content: "";
-  background: rgba(94, 154, 142, 0.2);
+  background: rgba(94, 154, 142, 0.8);
   width: 45px;
   height: 2px;
   top: 16px;
@@ -437,14 +437,14 @@ a:focus {
 
 .section-title h2, .section-title-white h2 {
   font-family: 'Nanum Pen Script', cursive;
-  background-color: rgba(94, 154, 142, 0.1);
+  /* background-color: rgba(94, 154, 142, 0.1); */
   font-size: 46px;
   font-size: 2.55556rem;
   color: #848383;
   margin: 59px 0 0;
   padding: 10px 25px 5px;
-  border-top: 2px solid rgba(94, 154, 142, 0.1);
-  border-bottom: 2px solid rgba(94, 154, 142, 0.1);
+  border-top: 2px solid rgba(94, 154, 142, 1);
+  border-bottom: 2px solid rgba(94, 154, 142, 1);
   display: inline-block;
   text-transform: capitalize;
   letter-spacing: 3px;
@@ -488,7 +488,7 @@ a:focus {
   margin: 0;
   font-size: 65px;
   color: #fff;
-  opacity: 0.4;
+  opacity: 1;
 }
 
 .section-title-white .vertical-line:before, .section-title-white .vertical-line:after {
@@ -2387,6 +2387,9 @@ a:focus {
 --------------------------------------------------------------*/
 .count-down-section {
   position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: -290px -90px !important;
 }
 
 .count-down-section:before {
@@ -2458,7 +2461,7 @@ a:focus {
 }
 
 .count-down-section #clock > div {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgb(49 49 49 / 100%);
   width: 23.5%;
   float: left;
   text-align: center;
@@ -2696,7 +2699,7 @@ a:focus {
 #1.1	inportant-people-section
 --------------------------------------------------------------*/
 .inportant-people-section {
-  background-color: #f9f9f9;
+  background-color: #000;
   /*** tablist ***/
   /*** tab-content ***/
 }
@@ -3844,6 +3847,10 @@ a:focus {
 
 .blog-details-content .comment-respond .comment-form .submit-btn button {
   border-radius: 0;
+}
+
+.vertical-line .flaticon-two {
+  margin-left: 3px !important;
 }
 
 /*# sourceMappingURL=style.css.map */
