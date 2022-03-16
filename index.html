@@ -50,6 +50,10 @@
 </head>
 
 <body id="home">
+  
+    <div id="attendees">
+      Loading attendees list...
+    </div>
 
     <!-- start page-wrapper -->
     <div class="page-wrapper">
@@ -98,7 +102,7 @@
 
                 <div class="save-the-date">
                     <h4>Save the date</h4>
-                    <span class="date">24 APR 2022</span>
+                    <span class="date">24th of April 2022</span>
                 </div>
             </div>
         </section>
@@ -399,7 +403,7 @@
                     <div class="col col-xs-12">
                         <div class="section-title-white">
                             <div class="vertical-line"><span><i class="fi flaticon-twox"></i></span></div>
-                            <h2>Celebrate With Me</h2>
+                            <h2 id="cwm">Celebrate With Me</h2>
                         </div>
                     </div>
                 </div> <!-- end section-title -->
@@ -408,11 +412,8 @@
                     <div class="col col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <p>Please reserve before April 16th, 2022.</p>
                         <form id="rsvp-form" class="form validate-rsvp-form row" method="post">
-                            <div class="col col-sm-6">
+                            <div class="col col-sm-12">
                                 <input type="text" name="name" class="form-control" placeholder="Your Name*">
-                            </div>
-                            <div class="col col-sm-6">
-                                <input type="email" name="email" class="form-control" placeholder="Your Email*">
                             </div>
                             <div class="col col-sm-6">
                                 <select class="form-control" name="guest" >
@@ -430,14 +431,14 @@
                                 </select>
                             </div>
                             <div class="col col-sm-6">
-                                <select class="form-control" name="events" >
+                                <select class="form-control" name="response">
                                     <option disabled selected>I Am Attending*</option>
-                                    <option>Yes, with pleasure</option>
-                                    <option>No, with heavy heart</option>
+                                    <option value="Yes">Yes, with pleasure</option>
+                                    <option value="No">No, with heavy heart</option>
                                 </select>
                             </div>
                             <div class="col col-sm-12">
-                                <textarea class="form-control" name="notes" placeholder="Your Message*"></textarea>
+                                <textarea class="form-control" name="notes" placeholder="Your Message"></textarea>
                             </div>
                             <div class="col col-sm-12 submit-btn">
                                 <button type="submit" class="submit">Submit Confirmation</button>

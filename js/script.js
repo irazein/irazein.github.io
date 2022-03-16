@@ -3,6 +3,13 @@
 	"use strict";
 
 
+  const binId = '623204807caf5d67836ac468';
+  const binKey = '$2b$10$ryaTGPJxUnvMz0nk.J4pfOCLwcqWh2SqpMbd5uGya/QmF1/9/GFPy';
+
+  // Aldee's bin
+  // const binId = '60221bed06934b65f5308efe';
+  // const binKey = '$2b$10$dvuDyvbfFchb9zzxgftqneKhezS0gvALDm/9kq5gQR03LAcDxYI4a';
+
     /*------------------------------------------
         = FUNCTIONS
     -------------------------------------------*/
@@ -526,6 +533,16 @@
     /*------------------------------------------
         = RSVP FORM SUBMISSION
     -------------------------------------------*/
+
+    function rsvpAjaxError() {
+      $( "#loader").hide();
+      $( "#error").fadeIn( "slow" );
+      setTimeout(function() {
+        $( "#error").fadeOut( "slow" );
+        $("button").removeAttr("disabled");
+      }, 3000);
+    }
+
     if ($("#rsvp-form").length) {
         $("#rsvp-form").validate({
             rules: {
@@ -533,13 +550,10 @@
                     required: true,
                     minlength: 2
                 },
-                email: "required",
-
                 guest: {
                     required: true
                 },
-
-                events: {
+                response: {
                     required: true
                 }
 
@@ -547,34 +561,55 @@
 
             messages: {
                 name: "Please enter your name",
-                email: "Please enter your email",
                 guest: "Select your number of guest",
-                events: "Select your event list"
+                response: "Please select if you are attending or not"
             },
 
             submitHandler: function (form) {
                 $("#loader").css("display", "inline-block");
+                $("button").attr("disabled", "disabled");
+
                 $.ajax({
-                    type: "POST",
-                    url: "mail.php",
-                    data: $(form).serialize(),
-                    success: function () {
+                  url: "https://api.jsonbin.io/b/" + binId + "/latest",
+                  method: "GET",
+                  headers: {
+                    "X-Master-Key": binKey,
+                    "Secret-Key": binKey
+                  },
+                  success: function (data) {
+                    const name = $(form).find('[name="name"]').val();
+                    const response = $(form).find('[name="response"]').val();
+                    const guests = $(form).find('[name="guest"]').val();
+                    const message = $(form).find('[name="notes"]').val();
+
+                    data.attendees.push({ name, response, guests, message });
+
+                    $.ajax({
+                      url: "https://api.jsonbin.io/v3/b/" + binId,
+                      method: "PUT",
+                      type: 'json',
+                      headers: {
+                        "X-Master-Key": binKey,
+                        "Secret-Key": binKey,
+                        "Content-Type": 'application/json'
+                      },
+                      data: JSON.stringify(data),
+                      success: function (data) {
                         $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
+                        $( "#success").fadeIn( "slow" );
                         setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
+                          $( "#success").fadeOut( "slow" );
+                          form.reset();
                         }, 3000);
-                        form.reset();
-                    },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
-                        }, 3000);
-                    }
+                      },
+                      error: rsvpAjaxError
+                    });
+
+                  },
+                  error: rsvpAjaxError
                 });
-                return false; // required to block normal submit since you used ajax
+
+                return false;
             }
 
         });
@@ -745,6 +780,48 @@
         }, 200));
     });
 
+
+
+
+    let cwm = 0;
+    $(document).on('click', '#cwm', function () {
+      cwm++;
+
+      if (cwm >= 5) {
+        cwm = 0;
+
+        $('.page-wrapper').hide();
+        $('#attendees').show();
+
+        $.ajax({
+          url: "https://api.jsonbin.io/b/" + binId + "/latest",
+          method: "GET",
+          headers: {
+            "X-Master-Key": binKey,
+            "Secret-Key": binKey
+          },
+          success: function (data) {
+            let html = '';
+            for (const attendee of data.attendees.reverse()) {
+              html += `<br />
+              <p>
+                Name: ${attendee.name}<br />
+                Response: ${attendee.response}<br />
+                Guests: ${attendee.guests}<br />
+                ${attendee.message ? 'Message: ' + attendee.message + '<br />' : ''}
+              </p>
+              <hr />`;
+            }
+
+            $('#attendees').html(html);
+          },
+          error: function () {
+            alert('Something went wrong!');
+          }
+        });
+
+      }
+    });
 
 
 })(window.jQuery);

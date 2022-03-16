@@ -172,8 +172,9 @@ a:focus {
 }
 
 .validate-rsvp-form label.error {
-  color: red;
+  color: #de5454;
   margin: 5px 0 0 0;
+  font-weight: normal;
 }
 
 .validate-rsvp-form #loader {
@@ -203,12 +204,12 @@ a:focus {
 }
 
 .validate-rsvp-form #success {
-  background-color: green;
+  background-color: rgba(7, 255, 61, 0.4);
   margin-bottom: 5px;
 }
 
 .validate-rsvp-form #error {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.4);
 }
 
 /*** music box ***/
@@ -2465,7 +2466,7 @@ a:focus {
 }
 
 .count-down-section #clock > div {
-  background: rgb(49 49 49 / 100%);
+  background: rgb(49 49 49 / 30%);
   width: 23.5%;
   float: left;
   text-align: center;
@@ -2476,6 +2477,10 @@ a:focus {
   -ms-border-radius: 5px;
   border-radius: 5px;
   border: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+.count-down-section #clock > div:hover {
+  background: rgb(49 49 49 / 100%);
 }
 
 @media (max-width: 767px) {
@@ -3858,6 +3863,15 @@ a:focus {
 
 .vertical-line .flaticon-two {
   margin-left: 3px !important;
+}
+
+#attendees {
+  display: none;
+  color: #fff;
+}
+
+#attendees p {
+  color: #fff !important;
 }
 
 /*# sourceMappingURL=style.css.map */
