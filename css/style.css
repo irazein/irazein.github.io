@@ -11,7 +11,7 @@
 #0.8	story-section
 #0.9	cta
 #1.0	events-section
-#1.1	inportant-people-section
+#1.1	inportant-attire-section
 #1.2	gallery-section
 #1.3	rsvp-section
 #1.4	getting-there-section
@@ -2389,7 +2389,9 @@ a:focus {
   position: relative;
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  background-position: -290px -90px !important;
+  box-sizing: border-box;
+  box-shadow: inset -150px 0 100px 0 #000;
+  background-position: center -100px !important;
 }
 
 .count-down-section:before {
@@ -2408,6 +2410,7 @@ a:focus {
   font-size: 4rem;
   color: #fff;
   margin: 0;
+  text-indent: 20px;
 }
 
 @media (max-width: 1199px) {
@@ -2458,6 +2461,7 @@ a:focus {
 .count-down-section #clock {
   color: #5e9a8e;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .count-down-section #clock > div {
@@ -2696,36 +2700,36 @@ a:focus {
 }
 
 /*--------------------------------------------------------------
-#1.1	inportant-people-section
+#1.1	inportant-attire-section
 --------------------------------------------------------------*/
-.inportant-people-section {
+.inportant-attire-section {
   background-color: #000;
   /*** tablist ***/
   /*** tab-content ***/
 }
 
-.inportant-people-section .tablist {
+.inportant-attire-section .tablist {
   text-align: center;
   max-height: 45px;
   margin-bottom: 45px;
 }
 
 @media (max-width: 767px) {
-  .inportant-people-section .tablist {
+  .inportant-attire-section .tablist {
     margin-bottom: 35px;
   }
 }
 
-.inportant-people-section .tablist ul {
+.inportant-attire-section .tablist ul {
   overflow: hidden;
   display: inline-block;
 }
 
-.inportant-people-section .tablist ul li {
+.inportant-attire-section .tablist ul li {
   float: left;
 }
 
-.inportant-people-section .tablist ul li a {
+.inportant-attire-section .tablist ul li a {
   background: rgba(94, 154, 142, 0.15);
   display: block;
   color: #3e3e3e;
@@ -2734,89 +2738,90 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .inportant-people-section .tablist ul li a {
+  .inportant-attire-section .tablist ul li a {
     font-size: 14px;
     font-size: 0.77778rem;
   }
 }
 
-.inportant-people-section .tablist ul .active a {
+.inportant-attire-section .tablist ul .active a {
   background-color: #5e9a8e;
   color: #fff;
 }
 
-.inportant-people-section .tab-content > div {
+.inportant-attire-section .tab-content > div {
   overflow: hidden;
 }
 
-.inportant-people-section .tab-content .grid-wrapper {
+.inportant-attire-section .tab-content .grid-wrapper {
   margin: 0 -15px;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
-  .inportant-people-section .tab-content .grid-wrapper {
+  .inportant-attire-section .tab-content .grid-wrapper {
     margin: 0 -7.5px;
   }
 }
 
-.inportant-people-section .tab-content .grid {
+.inportant-attire-section .tab-content .grid {
   width: 33.33%;
-  float: left;
+  display: inline-block;
   padding: 0 15px 0;
 }
 
 @media (max-width: 991px) {
-  .inportant-people-section .tab-content .grid {
+  .inportant-attire-section .tab-content .grid {
     width: 50%;
   }
 }
 
 @media (max-width: 767px) {
-  .inportant-people-section .tab-content .grid {
+  .inportant-attire-section .tab-content .grid {
     padding: 0 7.5px 0;
   }
 }
 
 @media (max-width: 550px) {
-  .inportant-people-section .tab-content .grid {
+  .inportant-attire-section .tab-content .grid {
     width: 100%;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(4),
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(5),
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(6) {
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(4),
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(5),
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(6) {
     margin-top: 30px;
   }
 }
 
 @media (max-width: 991px) {
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(3),
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(4),
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(5),
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(6) {
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(3),
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(4),
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(5),
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(6) {
     margin-top: 30px;
   }
 }
 
 @media (max-width: 550px) {
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(3),
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(4),
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(5),
-  .inportant-people-section .tab-content .grid-wrapper > .grid:nth-child(6) {
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(3),
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(4),
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(5),
+  .inportant-attire-section .tab-content .grid-wrapper > .grid:nth-child(6) {
     margin-top: 0;
   }
-  .inportant-people-section .tab-content .grid-wrapper > .grid + .grid {
+  .inportant-attire-section .tab-content .grid-wrapper > .grid + .grid {
     margin-top: 30px;
   }
 }
 
-.inportant-people-section .grid .img-holder {
+.inportant-attire-section .grid .img-holder {
   overflow: hidden;
 }
 
-.inportant-people-section .grid .img-holder img {
+.inportant-attire-section .grid .img-holder img {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -2827,9 +2832,11 @@ a:focus {
   -o-filter: grayscale(50%);
   -ms-filter: grayscale(50%);
   filter: grayscale(50%);
+  max-height: 685px;
+  min-width: 360px;
 }
 
-.inportant-people-section .grid:hover img {
+.inportant-attire-section .grid:hover img {
   -webkit-transform: scale(1.2) rotate(5deg);
   -ms-transform: scale(1.2) rotate(5deg);
   transform: scale(1.2) rotate(5deg);
@@ -2840,7 +2847,7 @@ a:focus {
   filter: grayscale(0);
 }
 
-.inportant-people-section .grid .details {
+.inportant-attire-section .grid .details {
   background: #000;
   border: 1px solid #f3f2f2;
   padding: 30px 15px 25px;
@@ -2853,16 +2860,16 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .inportant-people-section .grid .details {
+  .inportant-attire-section .grid .details {
     padding: 20px 15px 20px;
   }
 }
 
-.inportant-people-section .grid:hover .details {
+.inportant-attire-section .grid:hover .details {
   background-color: rgba(94, 154, 142, 0.05);
 }
 
-.inportant-people-section .grid .details h3 {
+.inportant-attire-section .grid .details h3 {
   font-size: 19px;
   font-size: 1.05556rem;
   font-weight: 600;
@@ -2872,20 +2879,20 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .inportant-people-section .grid .details h3 {
+  .inportant-attire-section .grid .details h3 {
     font-size: 18px;
     font-size: 1rem;
   }
 }
 
 @media (max-width: 767px) {
-  .inportant-people-section .grid .details h3 {
+  .inportant-attire-section .grid .details h3 {
     font-size: 16px;
     font-size: 0.88889rem;
   }
 }
 
-.inportant-people-section .grid .details > span {
+.inportant-attire-section .grid .details > span {
   font-size: 16px;
   font-size: 0.88889rem;
   color: #969494;
@@ -2893,35 +2900,35 @@ a:focus {
   display: block;
 }
 
-.inportant-people-section .grid .social-links {
+.inportant-attire-section .grid .social-links {
   display: inline-block;
   margin-top: 15px;
 }
 
 @media (max-width: 991px) {
-  .inportant-people-section .grid .social-links {
+  .inportant-attire-section .grid .social-links {
     margin-top: 10px;
   }
 }
 
-.inportant-people-section .grid .social-links > li + li {
+.inportant-attire-section .grid .social-links > li + li {
   margin-left: 20px;
 }
 
-.inportant-people-section .grid .social-links li a {
+.inportant-attire-section .grid .social-links li a {
   font-size: 14px;
   font-size: 0.77778rem;
   color: #7cafa5;
 }
 
 @media (max-width: 767px) {
-  .inportant-people-section .grid .social-links li a {
+  .inportant-attire-section .grid .social-links li a {
     font-size: 13px;
     font-size: 0.72222rem;
   }
 }
 
-.inportant-people-section .grid .social-links li a:hover {
+.inportant-attire-section .grid .social-links li a:hover {
   background-color: transparent;
   color: #5e9a8e;
 }
