@@ -22,6 +22,10 @@
 	Fonts
 ----------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700|Great+Vibes");
+@font-face {
+  font-family: 'Emitha-Script';
+  src: URL('../fonts/emitha-script-duo/Emitha-Script.ttf') format('truetype');
+}
 /*--------------------------------------------------------------
 #0.1    Theme Reset Style
 --------------------------------------------------------------*/
@@ -437,10 +441,9 @@ a:focus {
 }
 
 .section-title h2, .section-title-white h2 {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: Emitha-Script;
   /* background-color: rgba(94, 154, 142, 0.1); */
-  font-size: 46px;
-  font-size: 2.55556rem;
+  font-size: 3.3rem;
   color: #848383;
   margin: 59px 0 0;
   padding: 10px 25px 5px;
@@ -451,25 +454,14 @@ a:focus {
   letter-spacing: 3px;
 }
 
-@media (max-width: 1199px) {
-  .section-title h2, .section-title-white h2 {
-    font-size: 40px;
-    font-size: 2.22222rem;
-  }
-}
-
 @media (max-width: 991px) {
   .section-title h2, .section-title-white h2 {
-    font-size: 35px;
-    font-size: 1.94444rem;
     margin-top: 52px;
   }
 }
 
 @media (max-width: 767px) {
   .section-title h2, .section-title-white h2 {
-    font-size: 30px;
-    font-size: 1.66667rem;
     padding: 8px 10px 3px;
     letter-spacing: 1px;
   }
@@ -598,17 +590,18 @@ a:focus {
   overflow: hidden;
 }
 
-.social-links li {
-  float: left;
+.social-links {
+  float: right;
+  text-align: right;
 }
 
-.social-links li a {
+.social-links a {
   display: block;
   color: #fff;
   text-align: center;
 }
 
-.social-links li a:hover {
+.social-links a:hover {
   background-color: #5e9a8e;
 }
 
@@ -1445,7 +1438,7 @@ a:focus {
 }
 
 .header-style-1 .couple-logo h1, .header-style-2 .couple-logo h1 {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: Emitha-Script;
   font-size: 35px;
   font-size: 1.94444rem;
   margin: 0;
@@ -1734,27 +1727,12 @@ a:focus {
 }
 
 .hero .wedding-announcement .couple-name-merried-text h2 {
-  font-family: 'Nanum Pen Script', cursive;
-  font-size: 90px;
-  font-size: 5rem;
+  font-family: Emitha-Script;
+  font-size: 7rem;
   color: #fff;
   margin: 0 0 0.4em;
   position: relative;
   z-index: 10;
-}
-
-@media (max-width: 1199px) {
-  .hero .wedding-announcement .couple-name-merried-text h2 {
-    font-size: 70px;
-    font-size: 3.88889rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .hero .wedding-announcement .couple-name-merried-text h2 {
-    font-size: 55px;
-    font-size: 3.05556rem;
-  }
 }
 
 .hero .wedding-announcement .married-text h4 {
@@ -1879,7 +1857,7 @@ a:focus {
 }
 
 .hero .wedding-announcement .save-the-date:after {
-  background-color: rgba(94, 154, 142, 0.7);
+  background-color: rgb(84 162 162 / 70%);
   width: 100%;
   height: 100%;
   left: 0;
@@ -1887,7 +1865,7 @@ a:focus {
 }
 
 .hero .wedding-announcement .save-the-date h4 {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: Dosis, sans-serif;
   font-size: 40px;
   font-size: 2.22222rem;
   color: #fff;
@@ -2046,7 +2024,7 @@ a:focus {
 }
 
 .site-footer h2 {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: Emitha-Script;
   font-size: 67px;
   font-size: 3.72222rem;
   color: #fff;
@@ -2283,20 +2261,13 @@ a:focus {
 }
 
 .wedding-couple-section .details .signature {
-  font-family: 'Nanum Pen Script', cursive;
-  font-size: 28px;
-  font-size: 1.55556rem;
+  font-family: Emitha-Script;
+  font-size: 80px;
   display: block;
   padding-left: 25px;
   margin-top: 15px;
   position: relative;
-}
-
-@media (max-width: 1199px) {
-  .wedding-couple-section .details .signature {
-    font-size: 22px;
-    font-size: 1.22222rem;
-  }
+  text-align: right;
 }
 
 .wedding-couple-section .details .signature:before {
@@ -2406,47 +2377,16 @@ a:focus {
 }
 
 .count-down-section h2 {
-  font-family: 'Nanum Pen Script', cursive;
-  font-size: 72px;
-  font-size: 4rem;
-  color: #fff;
+  /* font-family: Emitha-Script; */
+  font-size: 1.4rem;
+  color: #909090;
   margin: 0;
   text-indent: 20px;
 }
 
-@media (max-width: 1199px) {
-  .count-down-section h2 {
-    font-size: 62px;
-    font-size: 3.44444rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .count-down-section h2 {
-    font-size: 50px;
-    font-size: 2.77778rem;
-  }
-}
-
 .count-down-section h2 > span {
-  font-size: 30px;
-  font-size: 1.66667rem;
   display: block;
   margin-bottom: 0.6em;
-}
-
-@media (max-width: 1199px) {
-  .count-down-section h2 > span {
-    font-size: 25px;
-    font-size: 1.38889rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .count-down-section h2 > span {
-    font-size: 20px;
-    font-size: 1.11111rem;
-  }
 }
 
 .count-down-section .count-down-clock {
@@ -2551,7 +2491,7 @@ a:focus {
 }
 
 .cta h2 {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: Emitha-Script;
   font-size: 75px;
   font-size: 4.16667rem;
   color: #fff;

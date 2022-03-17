@@ -845,4 +845,6 @@
       $('.page-wrapper').show();
     });
 
+    $('.gallery-filters .current').trigger('click');
+
 })(window.jQuery);
