@@ -801,17 +801,34 @@
             "Secret-Key": binKey
           },
           success: function (data) {
-            let html = '';
+
+            let yes = 0, no = 0, guests = 0;
+            let html = '<div id="summary"><p class="px px0">%con% confirmed</p><p class="px px1">%dec% declined</p><p class="px px2">%gue% guest(s)</p></div>';
+            
             for (const attendee of data.attendees.reverse()) {
-              html += `<br />
-              <p>
-                Name: ${attendee.name}<br />
-                Response: ${attendee.response}<br />
-                Guests: ${attendee.guests}<br />
-                ${attendee.message ? 'Message: ' + attendee.message + '<br />' : ''}
-              </p>
-              <hr />`;
+              html += `<p>
+                  Name: ${attendee.name}<br />
+                  Response: ${attendee.response}<br />
+                  Guests: ${attendee.guests}<br />
+                  ${attendee.message ? 'Message: ' + attendee.message : ''}
+                </p>`;
+
+                if (attendee.response === 'Yes') {
+                  yes++;
+                }
+
+                if (attendee.response === 'No') {
+                  no++;
+                }
+
+                guests += (attendee.guests * 1) || 0;
             }
+
+            html = html
+                    .replace('%con%', yes)
+                    .replace('%dec%', no)
+                    .replace('%gue%', guests) +
+                    '<br /><br /><button id="gback" class="btn btn-success" type="button">&larr; Go back</button>';
 
             $('#attendees').html(html);
           },
@@ -823,5 +840,9 @@
       }
     });
 
+    $(document).on('click', '#gback', function () {
+      $('#attendees').hide();
+      $('.page-wrapper').show();
+    });
 
 })(window.jQuery);

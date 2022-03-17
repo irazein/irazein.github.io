@@ -3867,11 +3867,40 @@ a:focus {
 
 #attendees {
   display: none;
-  color: #fff;
+  padding-top: 50px;
 }
 
+#attendees #summary {
+  margin: 0px auto;
+  width: 75%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#attendees #summary .px {
+  display: inline-block;
+  width: 29%;
+  margin: 0 1%;
+}
+  
 #attendees p {
-  color: #fff !important;
+  border: 1px solid;
+  padding: 10px;
+  margin: 0px auto;
+  border-radius: 16px;
+  width: 50%;
+  margin-top: 23px;
+  background-color: rgba(255,255,255, 0.1);
+  color: #5e9a8e !important;
+}
+
+#attendees #gback {
+  position: fixed;
+  top: 13px;
+  left: 13px;
+  color: #5e9a8e;
+  background: none;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
