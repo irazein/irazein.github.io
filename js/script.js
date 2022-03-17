@@ -815,13 +815,13 @@
 
                 if (attendee.response === 'Yes') {
                   yes++;
+
+                  guests += (attendee.guests * 1) || 1;
                 }
 
                 if (attendee.response === 'No') {
                   no++;
                 }
-
-                guests += (attendee.guests * 1) || 0;
             }
 
             html = html
