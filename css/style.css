@@ -3875,19 +3875,22 @@ a:focus {
   width: 75%;
   text-align: center;
   padding-top: 30px;
+  border-bottom: 1px solid;
+  padding-bottom: 17px;
 }
 
 #attendees #summary .px {
   display: inline-block;
   width: 29%;
   margin: 0 1%;
+  font-size: 11px !important;
 }
   
 #attendees p {
   border: 1px solid;
   padding: 10px;
   margin: 0px auto;
-  border-radius: 16px;
+  border-radius: 4px;
   width: 50%;
   margin-top: 23px;
   background-color: rgba(255,255,255, 0.1);
