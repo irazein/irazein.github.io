@@ -803,7 +803,7 @@
           success: function (data) {
 
             let yes = 0, no = 0, guests = 0;
-            let html = '<div id="summary"><p class="px px0">%con% confirmed</p><p class="px px1">%dec% declined</p><p class="px px2">%gue% guest(s)</p></div>';
+            let html = '<div id="summary"><p class="px px0">%con%<br />confirmed</p><p class="px px1">%dec%<br />declined</p><p class="px px2">%gue%<br />guest(s)</p></div>';
             
             for (const attendee of data.attendees.reverse()) {
               html += `<p>

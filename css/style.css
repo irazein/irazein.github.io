@@ -108,17 +108,20 @@ a:focus {
 
 .section-padding {
   padding: 120px 0;
+  padding-top: 35px;
 }
 
 @media (max-width: 1199px) {
   .section-padding {
     padding: 100px 0;
+    padding-top: 20px;
   }
 }
 
 @media (max-width: 991px) {
   .section-padding {
     padding: 80px 0;
+    padding-top: 10px;
   }
 }
 
@@ -3823,7 +3826,7 @@ a:focus {
   display: inline-block;
   width: 29%;
   margin: 0 1%;
-  font-size: 11px !important;
+  font-size: 14px !important;
 }
   
 #attendees p {
@@ -3844,6 +3847,35 @@ a:focus {
   color: #5e9a8e;
   background: none;
   border: none;
+}
+
+#roles .panel-default>.panel-heading {
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+  background-color: black;
+  border-color: #000;
+  color: #a7a7a7; 
+  border-radius: 0;
+}
+
+#roles .panel-title {
+  font-size: 18px !important;
+  font-weight: bolder !important;
+}
+
+#roles .panel-default {
+  border-color: #000;
+  border-radius: 0;
+  text-align: center;
+}
+
+#roles .panel-body {
+  background-color: #000;
+}
+
+#roles .panel-default>.panel-heading+.panel-collapse>.panel-body {
+  border-top-color: #000;
+  color: #a7a7a7;
 }
 
 /*# sourceMappingURL=style.css.map */
