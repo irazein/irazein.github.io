@@ -400,6 +400,7 @@
 
             $grid.imagesLoaded().progress( function() {
                 $grid.masonry('layout');
+                $('.gallery-filters a.current').click();
             });
         }
     }
@@ -844,7 +845,5 @@
       $('#attendees').hide();
       $('.page-wrapper').show();
     });
-
-    $('.gallery-filters .current').trigger('click');
 
 })(window.jQuery);
