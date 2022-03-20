@@ -3850,12 +3850,12 @@ a:focus {
 }
 
 #roles .panel-default>.panel-heading {
-  font-family: "Dosis", sans-serif;
-  text-transform: uppercase;
-  background-color: black;
-  border-color: #000;
-  color: #a7a7a7; 
-  border-radius: 0;
+  font-family: "Dosis", sans-serif !important;
+  text-transform: uppercase !important;
+  background-color: black !important;
+  border-color: #000 !important;
+  color: #a7a7a7 !important; 
+  border-radius: 0px !important;
 }
 
 #roles .panel-title {
@@ -3864,18 +3864,18 @@ a:focus {
 }
 
 #roles .panel-default {
-  border-color: #000;
-  border-radius: 0;
-  text-align: center;
+  border-color: #000 !important;
+  border-radius: 0px !important;
+  text-align: center !important;
 }
 
 #roles .panel-body {
-  background-color: #000;
+  background-color: #000 !important;
 }
 
 #roles .panel-default>.panel-heading+.panel-collapse>.panel-body {
-  border-top-color: #000;
-  color: #a7a7a7;
+  border-top-color: #000 !important;
+  color: #a7a7a7 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
