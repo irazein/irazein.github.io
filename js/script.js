@@ -230,8 +230,9 @@
         = HIDE PRELOADER
     -------------------------------------------*/
     function tn() { return Math.ceil(+new Date()/1000); }
+
+    let t = tn(), d = 0;
     function preloader() {
-        let t = tn(), d = 0;
         console.log('in preloader func', d);
 
         if($('.preloader').length) {
