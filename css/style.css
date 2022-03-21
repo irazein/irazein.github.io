@@ -747,7 +747,7 @@ a:focus {
   height: 90px;
   position: relative;
   margin: 0px auto !important;
-  margin-bottom: 24px;
+  margin-bottom: 24px !important;
 }
 
 .preloader .icon:before {
