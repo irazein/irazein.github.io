@@ -229,25 +229,45 @@
     /*------------------------------------------
         = HIDE PRELOADER
     -------------------------------------------*/
+    function tn() { return Math.ceil(+new Date()); }
     function preloader() {
-        console.log('in preloader func');
+        let t = tn(), d = 0;
+        console.log('in preloader func', d);
+
         if($('.preloader').length) {
-            console.log('in if preloader');
+
+            d = tn() - t;
+            t = tn();
+            
+            console.log('in if preloader', d);
             $('.preloader').delay(100).fadeOut(500, function() {
-              console.log('in preloader delay');
+              d = tn() - t;
+              t = tn();
+              
+              console.log('in preloader delay', d);
               
               //active wow
               wow.init();
-              console.log('in preloader delay, after wow init');
+              
+              d = tn() - t;
+              t = tn();
+              
+              console.log('in preloader delay, after wow init', d);
               
               if($(".save-the-date").length) {
-                  console.log('save the date');
-                  popupSaveTheDateCircle();
-                }
+                d = tn() - t;
+                t = tn();
+
+                console.log('save the date', d);
+                popupSaveTheDateCircle();
+              }
                 
-                //Active heor slider
-                heroSlider();
-                console.log('after hero slider');
+              //Active heor slider
+              heroSlider();
+              d = tn() - t;
+              t = tn();
+
+              console.log('after slider', d);
 
             });
         }
