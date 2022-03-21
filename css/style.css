@@ -737,7 +737,7 @@ a:focus {
   transform: translate(-50%, -50%);
 }
 
-.preloader .inner .msg {
+.preloader .inner #msg {
   text-align: center;
 }
 
@@ -746,7 +746,7 @@ a:focus {
   width: 90px;
   height: 90px;
   position: relative;
-  margin: 0px auto;
+  margin: 0px auto !important;
   margin-bottom: 24px;
 }
 
