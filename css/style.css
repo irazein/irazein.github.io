@@ -21,7 +21,7 @@
 /*---------------------------
 	Fonts
 ----------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700|Great+Vibes");
+@import url("../fonts/dosis.css");
 @font-face {
   font-family: 'Emitha-Script';
   src: URL('../fonts/emitha-script-duo/Emitha-Script.ttf') format('truetype');
