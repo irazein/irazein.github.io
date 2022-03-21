@@ -737,11 +737,17 @@ a:focus {
   transform: translate(-50%, -50%);
 }
 
+.preloader .inner .msg {
+  text-align: center;
+}
+
 .preloader .icon {
   display: block;
   width: 90px;
   height: 90px;
   position: relative;
+  margin: 0px auto;
+  margin-bottom: 24px;
 }
 
 .preloader .icon:before {
@@ -1472,7 +1478,7 @@ a:focus {
 }
 
 .header-style-1 .navigation, .header-style-2 .navigation {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #000;
 }
 
 .burger.open-btn {
