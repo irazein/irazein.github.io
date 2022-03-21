@@ -230,18 +230,24 @@
         = HIDE PRELOADER
     -------------------------------------------*/
     function preloader() {
+        console.log('in preloader func');
         if($('.preloader').length) {
+            console.log('in if preloader');
             $('.preloader').delay(100).fadeOut(500, function() {
-
-                //active wow
-                wow.init();
-
-                if($(".save-the-date").length) {
-                    popupSaveTheDateCircle();
+              console.log('in preloader delay');
+              
+              //active wow
+              wow.init();
+              console.log('in preloader delay, after wow init');
+              
+              if($(".save-the-date").length) {
+                  console.log('save the date');
+                  popupSaveTheDateCircle();
                 }
-
+                
                 //Active heor slider
                 heroSlider();
+                console.log('after hero slider');
 
             });
         }
